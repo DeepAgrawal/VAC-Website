@@ -1,20 +1,39 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import { gsap } from "gsap"
 
 import Menu from "./Menu"
 
 const Header = () => {
-  const [isMenu, setIsMenu] = useState(false)
-  const toggleMenu = () => {
-    setIsMenu(!isMenu)
-  }
+  const [state, setState] = useState({
+    initial: false,
+    clicked: null,
+  })
+  const [disabled, setDisabled] = useState(false)
 
-  useEffect(() => {
-    if (isMenu) {
+  const toggleMenu = () => {
+    disableToggle()
+    if (state.initial === false) {
+      setState({
+        initial: null,
+        clicked: true,
+      })
+    } else if (state.clicked === true) {
+      setState({
+        clicked: false,
+      })
+    } else if (state.clicked === false) {
+      setState({
+        clicked: true,
+      })
     }
-  }, [isMenu])
+  }
+  const disableToggle = () => {
+    setDisabled(!disabled)
+    setTimeout(() => {
+      setDisabled(false)
+    }, 1000)
+  }
 
   const images = useStaticQuery(graphql`
     query Logo {
@@ -34,135 +53,138 @@ const Header = () => {
         <div className="container">
           <div className="row v-center space-between">
             <Image
+              className="header-logo"
               fluid={images.file.childImageSharp.fluid}
               alt="VIT Animation Club"
             />
-            <div className="hamburger" onClick={toggleMenu}>
-              <svg
-                enable-background="new 0 0 512 512"
-                height="512px"
-                id="Layer_1"
-                version="1.1"
-                viewBox="0 0 512 512"
-                width="512px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="145.6"
-                    y="151.1"
-                  />
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="233.1"
-                    y="151.1"
-                  />
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="320.6"
-                    y="151.1"
-                  />
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="145.6"
-                    y="233.1"
-                  />
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="233.1"
-                    y="233.1"
-                  />
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="320.6"
-                    y="233.1"
-                  />
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="145.6"
-                    y="315.1"
-                  />
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="233.1"
-                    y="315.1"
-                  />
-                  <rect
-                    fill="none"
-                    height="45.7"
-                    stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="10"
-                    width="45.7"
-                    x="320.6"
-                    y="315.1"
-                  />
-                </g>
-              </svg>
+            <div className="hamburger">
+              <button disabled={disabled} onClick={toggleMenu}>
+                <svg
+                  enable-background="new 0 0 512 512"
+                  height="512px"
+                  id="Layer_1"
+                  version="1.1"
+                  viewBox="0 0 512 512"
+                  width="512px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="145.6"
+                      y="151.1"
+                    />
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="233.1"
+                      y="151.1"
+                    />
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="320.6"
+                      y="151.1"
+                    />
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="145.6"
+                      y="233.1"
+                    />
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="233.1"
+                      y="233.1"
+                    />
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="320.6"
+                      y="233.1"
+                    />
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="145.6"
+                      y="315.1"
+                    />
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="233.1"
+                      y="315.1"
+                    />
+                    <rect
+                      fill="none"
+                      height="45.7"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="10"
+                      width="45.7"
+                      x="320.6"
+                      y="315.1"
+                    />
+                  </g>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      {/* <Menu /> */}
+      <Menu state={state} />
     </>
   )
 }
