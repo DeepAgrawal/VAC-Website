@@ -23,7 +23,7 @@
   }
   .menu-container {
     position: relative;
-    background: red;
+    background: $red;
     height: 100%;
     overflow: hidden;
     z-index: 1000;
@@ -91,6 +91,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @include media("<=tablet") {
+        display: none;
+      }
       h3 {
         justify-self: start;
         margin-right: auto;

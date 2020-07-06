@@ -18,10 +18,10 @@ const Hero = () => {
       .to(".anim-container", { css: { display: "none" } })
       .set(document.body, { overflow: "auto" })
       .set(".hero-title", { css: { zIndex: 998 } })
-  })
+  }, [])
 
   return (
-    <div className="hero">
+    <div id="home" className="hero">
       {/* Animation Container */}
       <div className="anim-container">
         <div className="left">

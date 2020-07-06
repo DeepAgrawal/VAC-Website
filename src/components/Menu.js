@@ -1,10 +1,14 @@
 import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { gsap } from "gsap"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
-const Menu = ({ state }) => {
+gsap.registerPlugin(ScrollToPlugin)
+
+const Menu = ({ state, toggleMenu }) => {
   const menu = useRef(null)
   const animbg = useRef(null)
+
   useEffect(() => {
     if (state.clicked === false) {
       // Close menu
@@ -48,7 +52,6 @@ const Menu = ({ state }) => {
           {
             duration: 0.4,
             opacity: 0,
-            // transformOrigin: "right top",
             stagger: 0.05,
             ease: "power3.inOut",
           },
@@ -58,33 +61,45 @@ const Menu = ({ state }) => {
     }
   }, [state])
 
+  useEffect(() => {
+    gsap.utils.toArray(".menu-link").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault()
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: e.target.getAttribute("href").slice(1),
+        })
+      })
+    })
+  }, [])
+
   return (
     <div ref={menu} className="menu">
       <div ref={animbg} className="anim-bg"></div>
       <div className="menu-container">
         <div className="menu-left">
           <div className="menu-links">
-            <Link className="menu-link" to="/">
+            <Link onClick={toggleMenu} className="menu-link link" to="#home">
               Home
             </Link>
-            <Link className="menu-link" to="/">
+            <Link onClick={toggleMenu} className="menu-link link" to="#home">
               About
             </Link>
-            <Link className="menu-link" to="/">
+            <Link onClick={toggleMenu} className="menu-link link" to="#gallery">
               Gallery
             </Link>
-            <Link className="menu-link" to="/">
+            <Link onClick={toggleMenu} className="menu-link link" to="#events">
               Events
             </Link>
-            <Link className="menu-link" to="/">
+            <Link onClick={toggleMenu} className="menu-link link" to="#contact">
               Contact Us
             </Link>
           </div>
           <div className="social-links">
-            <a className="social-link" href="/">
+            <a className="social-link link" href="/">
               Instagram
             </a>
-            <a className="social-link" href="/">
+            <a className="social-link link" href="/">
               Facebook
             </a>
           </div>

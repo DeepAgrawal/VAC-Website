@@ -2,14 +2,18 @@
 @import "./varibles.scss";
 @import "./breakpoints.scss";
 
+@import "./components/Cursor.scss";
 @import "./components/Header.scss";
 @import "./components/Menu.scss";
 @import "./components/Hero.scss";
 @import "./components/Gallery.scss";
+@import "./components/Events.scss";
+@import "./components/Contact.scss";
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 0;
+  height: 0;
 }
 
 * {
@@ -17,6 +21,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  cursor: none;
 }
 
 body,

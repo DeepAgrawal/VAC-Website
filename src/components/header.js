@@ -40,7 +40,7 @@ const Header = () => {
       file(relativePath: { eq: "vac-white-logo.png" }) {
         childImageSharp {
           fluid {
-            src
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -57,10 +57,10 @@ const Header = () => {
               fluid={images.file.childImageSharp.fluid}
               alt="VIT Animation Club"
             />
-            <div className="hamburger">
+            <div className="hamburger link">
               <button disabled={disabled} onClick={toggleMenu}>
                 <svg
-                  enable-background="new 0 0 512 512"
+                  enableBackground="new 0 0 512 512"
                   height="512px"
                   id="Layer_1"
                   version="1.1"
@@ -73,10 +73,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="145.6"
                       y="151.1"
@@ -85,10 +85,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="233.1"
                       y="151.1"
@@ -97,10 +97,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="320.6"
                       y="151.1"
@@ -109,10 +109,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="145.6"
                       y="233.1"
@@ -121,10 +121,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="233.1"
                       y="233.1"
@@ -133,10 +133,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="320.6"
                       y="233.1"
@@ -145,10 +145,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="145.6"
                       y="315.1"
@@ -157,10 +157,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="233.1"
                       y="315.1"
@@ -169,10 +169,10 @@ const Header = () => {
                       fill="none"
                       height="45.7"
                       stroke="white"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="10"
                       width="45.7"
                       x="320.6"
                       y="315.1"
@@ -184,7 +184,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Menu state={state} />
+      <Menu state={state} toggleMenu={toggleMenu} />
     </>
   )
 }
