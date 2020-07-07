@@ -94,18 +94,15 @@
       @include media("<=tablet") {
         display: none;
       }
-      h3 {
-        justify-self: start;
-        margin-right: auto;
-        margin-bottom: 20px;
-        padding: 0 50px;
-        font-size: 2rem;
-        color: $white;
-      }
-      p {
-        padding: 0 50px;
-        font-size: 1.2rem;
-        color: $white;
+      .walt-container {
+        position: absolute;
+        right: -50px;
+        bottom: -50px;
+        -ms-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+        img {
+          height: 500px;
+        }
       }
     }
   }

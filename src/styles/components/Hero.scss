@@ -74,6 +74,11 @@
         flex: 1;
         background: $red;
       }
+      .left-slab:nth-child(odd) {
+        @include media("<=phone") {
+          display: none;
+        }
+      }
     }
     .right {
       flex: 1;
@@ -83,6 +88,11 @@
       .right-slab {
         flex: 1;
         background: black;
+      }
+      .right-slab:nth-child(even) {
+        @include media("<=phone") {
+          display: none;
+        }
       }
     }
   }

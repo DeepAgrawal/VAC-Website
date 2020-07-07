@@ -1,135 +1,310 @@
+// .gallery-container {
+//   background-color: black;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   transform-origin: 50% 50%;
+//   overflow: hidden;
+//   position: relative;
+//   width: 100vw !important;
+//   height: 100vh;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+// }
+
+// .gallery {
+//   display: grid;
+//   grid-template-columns: repeat(4, 0.8fr);
+//   grid-template-rows: repeat(4, 0.8fr);
+//   grid-column-gap: 10px;
+//   grid-row-gap: 10px;
+//   grid-template-areas:
+//     "box2 . box1 box1"
+//     "box2 box3 box3 box4"
+//     "box5 box3 box3 box6"
+//     "box7 box7 . box6";
+//   //
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: 1;
+//   position: absolute;
+// }
+
+// .box1 {
+//   grid-area: box1;
+//   // background-color: white;
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-end;
+// }
+// .image1 {
+//   background-color: red;
+//   position: relative;
+//   width: 50%;
+//   &:before {
+//     content: "";
+//     float: left;
+//     padding-top: 100%;
+//   }
+//   .gatsby-image-wrapper {
+//     position: absolute !important;
+//     height: 100%;
+//     width: 100%;
+//   }
+// }
+
+// .box2 {
+//   grid-area: box2;
+//   /* background-color: white; */
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: center;
+// }
+// .image2 {
+//   background-color: red;
+//   position: relative;
+//   width: 100%;
+//   &:before {
+//     content: "";
+//     float: left;
+//     padding-top: 100%;
+//   }
+//   .gatsby-image-wrapper {
+//     position: absolute !important;
+//     height: 100%;
+//     width: 100%;
+//   }
+// }
+
+// .box3 {
+//   grid-area: box3;
+//   /* background-color: white; */
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .image3 {
+//   position: relative;
+//   // background-color: red;
+//   width: 100%;
+//   height: 100%;
+//   // padding-top: 100%;
+//   position: relative;
+//   .gatsby-image-wrapper {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//   }
+// }
+
+// .box4 {
+//   grid-area: box4;
+//   /* background-color: white; */
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+// }
+// .image4 {
+//   background-color: red;
+//   width: 100%;
+//   height: 100%;
+//   transform: scale(1.6);
+//   transform-origin: 0% 0%;
+//   position: relative;
+//   .gatsby-image-wrapper {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//   }
+// }
+
+// .box5 {
+//   grid-area: box5;
+//   /* background-color: white; */
+//   justify-content: flex-end;
+//   align-items: flex-end;
+// }
+// .image5 {
+//   background-color: red;
+//   width: 100%;
+//   height: 100%;
+//   transform: scale(1.6);
+//   transform-origin: 100% 100%;
+//   position: relative;
+//   .gatsby-image-wrapper {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//   }
+// }
+
+// .box6 {
+//   grid-area: box6;
+//   /* background-color: white; */
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+// }
+// .image6 {
+//   background-color: red;
+//   // height: 100%;
+//   width: 100px;
+//   position: relative;
+//   // .gatsby-image-wrapper {
+//   //   position: absolute;
+//   //   top: 0;
+//   //   left: 0;
+//   //   height: 100%;
+//   // }
+//   // background-color: red;
+//   // position: relative;
+//   // width: 100%;
+//   // &:before {
+//   //   content: "";
+//   //   float: left;
+//   //   padding-top: 100%;
+//   // }
+//   // .gatsby-image-wrapper {
+//   //   position: absolute !important;
+//   //   height: 100%;
+//   //   width: 100%;
+//   // }
+// }
+
+// .box7 {
+//   grid-area: box7;
+//   /* background-color: white; */
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-start;
+// }
+// .image7 {
+//   // background-color: red;
+//   // height: 100px;
+//   // width: 100px;
+//   // position: relative;
+//   // .gatsby-image-wrapper {
+//   //   position: absolute;
+//   //   top: 0;
+//   //   left: 0;
+//   //   height: 100%;
+//   // }
+//   background-color: red;
+//   position: relative;
+//   width: 50%;
+//   &:before {
+//     content: "";
+//     float: left;
+//     padding-top: 100%;
+//   }
+//   .gatsby-image-wrapper {
+//     position: absolute !important;
+//     height: 100%;
+//     width: 100%;
+//   }
+// }
+
 .gallery-container {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // padding-top: 40px;
-  transform-origin: 50% 50%;
-  overflow: hidden;
-  position: relative;
-  //
-  width: 100vw !important;
   height: 100vh;
+  width: 100%;
+  background-color: black;
   position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.gallery {
-  // height: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 21vh);
-  grid-template-rows: repeat(4, 21vh);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  grid-template-areas:
-    "box2 . box1 box1"
-    "box2 box3 box3 box4"
-    "box5 box3 box3 box6"
-    "box7 box7 . box6";
-  //
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  // width: 70vw;
-  // height: 60vw;
-  // margin: 0 calc(100vw / 20 * 3);
-  position: absolute;
-}
-
-.box1 {
-  grid-area: box1;
-  /* background-color: white; */
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.image1 {
-  background-color: red;
-  height: 100px;
-  width: 100px;
-}
-
-.box2 {
-  grid-area: box2;
-  /* background-color: white; */
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.image2 {
-  background-color: red;
-  height: 100px;
-  width: 100px;
-}
-
-.box3 {
-  grid-area: box3;
-  /* background-color: white; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.image3 {
-  position: relative;
-  background-color: red;
-  width: 100%;
-  padding-top: 100%;
-}
-
-.box4 {
-  grid-area: box4;
-  /* background-color: white; */
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.image4 {
-  background-color: red;
-  width: 100%;
-  padding-top: 100%;
-  transform: scale(1.6);
-  transform-origin: 0% 0%;
-}
-
-.box5 {
-  grid-area: box5;
-  /* background-color: white; */
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.image5 {
-  background-color: red;
-  width: 100%;
-  padding-top: 100%;
-  transform: scale(1.6);
-  transform-origin: 100% 100%;
-}
-
-.box6 {
-  grid-area: box6;
-  /* background-color: white; */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.image6 {
-  background-color: red;
-  height: 100px;
-  width: 100px;
-}
-
-.box7 {
-  grid-area: box7;
-  /* background-color: white; */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-.image7 {
-  background-color: red;
-  height: 100px;
-  width: 100px;
+  overflow: hidden;
+  .gallery-heading {
+    font-size: 5rem;
+    padding: 150px 0 0 0;
+    -webkit-text-stroke: 0.12rem white;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    display: none;
+    @include media("<=tablet") {
+      display: block;
+    }
+    @include media("<=phone") {
+      display: block;
+    }
+  }
+  .gallery {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(4, 20vh);
+    grid-template-rows: repeat(4, 20vh);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+      ". . box1 ."
+      "box2 box3 box3 box4"
+      "box5 box3 box3 box6"
+      ". box7 . .";
+    @include media("<=tablet") {
+      top: 60%;
+      grid-template-columns: repeat(4, 15vh);
+      grid-template-rows: repeat(4, 15vh);
+    }
+    @include media("<=phone") {
+      top: 60%;
+      grid-template-columns: repeat(4, 10vh);
+      grid-template-rows: repeat(4, 10vh);
+    }
+    .box1 {
+      // top
+      grid-area: box1;
+      // background-color: red;
+      position: relative;
+      left: 50%;
+      .image1 {
+      }
+    }
+    .box2 {
+      // top left
+      grid-area: box2;
+      // background-color: red;
+      position: relative;
+      margin: 2vh 0 0 2vh;
+      .image2 {
+      }
+    }
+    .box3 {
+      grid-area: box3;
+      // background-color: red;
+      .image3 {
+      }
+    }
+    .box4 {
+      grid-area: box4;
+      // background-color: red;
+      .image4 {
+      }
+    }
+    .box5 {
+      grid-area: box5;
+      // background-color: red;
+      .image5 {
+      }
+    }
+    .box6 {
+      grid-area: box6;
+      // background-color: red;
+      margin: 0 2vh 2vh 0;
+      .image6 {
+      }
+    }
+    .box7 {
+      // bottom
+      grid-area: box7;
+      // background-color: red;
+      position: relative;
+      left: -50%;
+      .image7 {
+      }
+    }
+  }
 }

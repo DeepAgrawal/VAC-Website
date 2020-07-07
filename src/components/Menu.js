@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import { gsap } from "gsap"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
+import Walt from "../images/walt.png"
+
 gsap.registerPlugin(ScrollToPlugin)
 
 const Menu = ({ state, toggleMenu }) => {
@@ -19,7 +21,12 @@ const Menu = ({ state, toggleMenu }) => {
           { height: "100%" },
           { duration: 0.5, height: "0%", stagger: 0.1 }
         )
-        .to(".header-logo", { duration: 0, opacity: 100 }, 0.45)
+        .to(
+          ".header-logo",
+          { duration: 0.6, autoAlpha: 100, y: 0, ease: "power3.out" },
+          0
+        )
+        .set(".header-logo", { css: { opacity: 1 } })
     } else if (
       state.clicked === true ||
       (state.clicked === true && state.initial === null)
@@ -57,7 +64,7 @@ const Menu = ({ state, toggleMenu }) => {
           },
           "-=0.4"
         )
-        .to(".header-logo", { duration: 0, opacity: 0 }, 0)
+        .to(".header-logo", { duration: 0.4, autoAlpha: 0, y: "100vh" }, 0)
     }
   }, [state])
 
@@ -72,6 +79,15 @@ const Menu = ({ state, toggleMenu }) => {
       })
     })
   }, [])
+
+  const shakeWalt = () => {
+    console.log("walt clicked")
+    const walttl = gsap.timeline()
+    walttl
+      .to(".walt-container", { duration: 0.2, rotate: "-45deg" })
+      .to(".walt-container", { duration: 0.2, rotate: "-15deg" })
+      .to(".walt-container", { duration: 0.2, rotate: "-30deg" })
+  }
 
   return (
     <div ref={menu} className="menu">
@@ -105,15 +121,9 @@ const Menu = ({ state, toggleMenu }) => {
           </div>
         </div>
         <div className="menu-right">
-          <h3>Heading</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cum
-            et doloribus commodi explicabo consectetur adipisci, atque neque.
-            Beatae facere dolorem natus, odio, sunt mollitia reprehenderit
-            similique consectetur minima repudiandae minus neque saepe animi
-            unde optio repellendus cupiditate, ipsa perferendis adipisci dolores
-            alias illum. Praesentium eum magni rem cupiditate soluta.
-          </p>
+          <div onClick={shakeWalt} className="walt-container">
+            <img src={Walt} alt="walt" />
+          </div>
         </div>
       </div>
     </div>
