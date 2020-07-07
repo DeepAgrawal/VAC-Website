@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { gsap } from "gsap"
 
 import Menu from "./Menu"
 

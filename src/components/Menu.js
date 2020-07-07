@@ -112,10 +112,18 @@ const Menu = ({ state, toggleMenu }) => {
             </Link>
           </div>
           <div className="social-links">
-            <a className="social-link link" href="/">
+            <a
+              className="social-link link"
+              target="_blank"
+              href="https://www.instagram.com/vit_animation/"
+            >
               Instagram
             </a>
-            <a className="social-link link" href="/">
+            <a
+              className="social-link link"
+              target="_blank"
+              href="https://www.facebook.com/vitanimationclub"
+            >
               Facebook
             </a>
           </div>

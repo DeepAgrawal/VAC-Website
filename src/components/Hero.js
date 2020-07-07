@@ -16,9 +16,33 @@ const Hero = () => {
       })
       .to(".right-slab", { duration: 1, width: 0, stagger: 0.5 }, "-=1")
       .to(".anim-container", { css: { display: "none" } })
+      .from(
+        ".scroll-mark",
+        { duration: 1, y: -1000, autoAlpha: 0, scale: 3 },
+        "-=1.5"
+      )
+      .to(".hamburger", {
+        css: {
+          borderRadius: "50%",
+          backgroundColor: "white",
+        },
+
+        duration: 0.2,
+      })
+      .to(".hamburger", {
+        css: { backgroundColor: "transparent" },
+        duration: 0.2,
+      })
       .set(document.body, { overflow: "auto" })
       .set(".hero-title", { css: { zIndex: 998 } })
   }, [])
+
+  const scrollToGallery = () => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: "#gallery",
+    })
+  }
 
   return (
     <div id="home" className="hero">
@@ -49,7 +73,7 @@ const Hero = () => {
             <h1>intelligence made</h1>
             <h1>visible.</h1>
           </div>
-          <div className="scroll-mark">
+          <div onClick={scrollToGallery} className="scroll-mark old">
             Explore More
             <span>
               <img src={Arrow} alt="Explore More" />

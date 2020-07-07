@@ -60,37 +60,58 @@ const Gallery = () => {
           <div className="gallery">
             <div className="box1 gridLayer rside-image">
               <div className="image1 block">
-                <Image fluid={images.file.childImageSharp.fluid} />
+                <Image
+                  className="gray-scale"
+                  fluid={images.file.childImageSharp.fluid}
+                />
               </div>
             </div>
             <div className="box2 gridLayer lside-image">
               <div className="image2 block">
-                <Image fluid={images.file.childImageSharp.fluid} />
+                <Image
+                  className="gray-scale"
+                  fluid={images.file.childImageSharp.fluid}
+                />
               </div>
             </div>
             <div className="box3 gridLayer centerBlock">
               <div className="image3 block">
-                <Image fluid={images.file.childImageSharp.fluid} />
+                <Image
+                  className="gray-scale"
+                  fluid={images.file.childImageSharp.fluid}
+                />
               </div>
             </div>
             <div className="box4 gridLayer rside-image">
               <div className="image4 block">
-                <Image fluid={images.file.childImageSharp.fluid} />
+                <Image
+                  className="gray-scale"
+                  fluid={images.file.childImageSharp.fluid}
+                />
               </div>
             </div>
             <div className="box5 gridLayer lside-image">
               <div className="image5 block">
-                <Image fluid={images.file.childImageSharp.fluid} />
+                <Image
+                  className="gray-scale"
+                  fluid={images.file.childImageSharp.fluid}
+                />
               </div>
             </div>
             <div className="box6 gridLayer rside-image">
               <div className="image6 block">
-                <Image fluid={images.file.childImageSharp.fluid} />
+                <Image
+                  className="gray-scale"
+                  fluid={images.file.childImageSharp.fluid}
+                />
               </div>
             </div>
             <div className="box7 gridLayer lside-image">
               <div className="image7 block">
-                <Image fluid={images.file.childImageSharp.fluid} />
+                <Image
+                  className="gray-scale"
+                  fluid={images.file.childImageSharp.fluid}
+                />
               </div>
             </div>
           </div>
