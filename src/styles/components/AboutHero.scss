@@ -1,0 +1,20 @@
+.about-hero {
+  height: 100vh;
+  background-color: $black;
+  .back-to-home {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    .back-arrow {
+      height: 30px;
+      transform: rotateY(180deg);
+      margin-right: 15px;
+    }
+    a {
+      font-size: 1.5rem;
+      color: $white;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

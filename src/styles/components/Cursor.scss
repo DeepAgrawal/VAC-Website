@@ -1,0 +1,37 @@
+.cursor {
+  height: 20px;
+  width: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 99999;
+  pointer-events: none;
+  transition: all 0.1s ease;
+  transition-property: transform, height, width;
+  transform-origin: 100% 100%;
+  @include media("<=tablet") {
+    display: none;
+  }
+}
+
+.link-grow {
+  transform: scale(2);
+  background-color: white;
+}
+
+.hover-link {
+  mix-blend-mode: multiply;
+}
+
+.hover-invert {
+  backdrop-filter: invert(100%);
+  height: 60px;
+  width: 60px;
+}
+
+.hover-gray {
+  backdrop-filter: grayscale(100%);
+  height: 80px;
+  width: 80px;
+}
