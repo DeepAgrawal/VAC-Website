@@ -3,11 +3,12 @@ import Arrow from "../images/right.svg"
 import { gsap } from "gsap"
 
 const Hero = () => {
+  console.log("called")
+
   useEffect(() => {
+    let tl = gsap.timeline()
     window.scrollTo(0, 0)
-    const tl1 = gsap.timeline()
-    tl1
-      .set(document.body, { css: { visibility: "visible" } })
+    tl.set(document.body, { css: { visibility: "visible" } })
       .set(document.body, { overflow: "hidden" })
       .to(".left-slab", {
         duration: 1,
@@ -24,17 +25,22 @@ const Hero = () => {
       .to(".hamburger", {
         css: {
           borderRadius: "50%",
-          backgroundColor: "white",
+          backgroundColor: "rgba(255,255,255, 0.5)",
         },
-
-        duration: 0.2,
+        duration: 0.3,
       })
       .to(".hamburger", {
         css: { backgroundColor: "transparent" },
-        duration: 0.2,
+        duration: 0.3,
       })
       .set(document.body, { overflow: "auto" })
       .set(".hero-title", { css: { zIndex: 998 } })
+
+    // cleanup
+    return () => {
+      tl.kill()
+      tl = null
+    }
   }, [])
 
   const scrollToGallery = () => {

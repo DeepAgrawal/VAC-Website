@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Header from "./Header"
+
+import "../styles/App.scss"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
       <main>{children}</main>
     </>
   )

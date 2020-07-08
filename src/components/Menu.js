@@ -12,9 +12,10 @@ const Menu = ({ state, toggleMenu }) => {
   const animbg = useRef(null)
 
   useEffect(() => {
+    let tl2 = gsap.timeline()
+    let tl1 = gsap.timeline()
     if (state.clicked === false) {
       // Close menu
-      const tl2 = gsap.timeline()
       tl2
         .fromTo(
           [menu.current, animbg.current],
@@ -32,7 +33,6 @@ const Menu = ({ state, toggleMenu }) => {
       (state.clicked === true && state.initial === null)
     ) {
       // Open menu
-      const tl1 = gsap.timeline()
       tl1
         .fromTo(
           [animbg.current, menu.current],
@@ -66,22 +66,36 @@ const Menu = ({ state, toggleMenu }) => {
         )
         .to(".header-logo", { duration: 0.4, autoAlpha: 0, y: "100vh" }, 0)
     }
+
+    return () => {
+      tl1.kill()
+      tl1 = null
+      tl2.kill()
+      tl2 = null
+    }
   }, [state])
 
-  useEffect(() => {
-    gsap.utils.toArray(".menu-link").forEach(function (a) {
-      a.addEventListener("click", function (e) {
-        e.preventDefault()
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: e.target.getAttribute("href").slice(1),
-        })
-      })
+  const scroll = e => {
+    e.preventDefault()
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: e.target.getAttribute("href").slice(1),
     })
+  }
+
+  useEffect(() => {
+    gsap.utils.toArray(".menu-link-scroll").forEach(function (a) {
+      a.addEventListener("click", scroll)
+    })
+
+    return () => {
+      gsap.utils.toArray(".menu-link-scroll").forEach(function (a) {
+        a.removeEventListener("click", scroll)
+      })
+    }
   }, [])
 
   const shakeWalt = () => {
-    console.log("walt clicked")
     const walttl = gsap.timeline()
     walttl
       .to(".walt-container", { duration: 0.2, rotate: "-45deg" })
@@ -95,19 +109,35 @@ const Menu = ({ state, toggleMenu }) => {
       <div className="menu-container">
         <div className="menu-left">
           <div className="menu-links">
-            <Link onClick={toggleMenu} className="menu-link link" to="#home">
+            <Link
+              onClick={toggleMenu}
+              className="menu-link menu-link-scroll link"
+              to="#home"
+            >
               Home
             </Link>
-            <Link onClick={toggleMenu} className="menu-link link" to="#home">
+            <Link className="menu-link link" to="/about">
               About
             </Link>
-            <Link onClick={toggleMenu} className="menu-link link" to="#gallery">
+            <Link
+              onClick={toggleMenu}
+              className="menu-link menu-link-scroll link"
+              to="#gallery"
+            >
               Gallery
             </Link>
-            <Link onClick={toggleMenu} className="menu-link link" to="#events">
+            <Link
+              onClick={toggleMenu}
+              className="menu-link menu-link-scroll link"
+              to="#events"
+            >
               Events
             </Link>
-            <Link onClick={toggleMenu} className="menu-link link" to="#contact">
+            <Link
+              onClick={toggleMenu}
+              className="menu-link menu-link-scroll link"
+              to="#contact"
+            >
               Contact Us
             </Link>
           </div>
@@ -115,6 +145,7 @@ const Menu = ({ state, toggleMenu }) => {
             <a
               className="social-link link"
               target="_blank"
+              rel="noreferrer"
               href="https://www.instagram.com/vit_animation/"
             >
               Instagram
@@ -122,6 +153,7 @@ const Menu = ({ state, toggleMenu }) => {
             <a
               className="social-link link"
               target="_blank"
+              rel="noreferrer"
               href="https://www.facebook.com/vitanimationclub"
             >
               Facebook

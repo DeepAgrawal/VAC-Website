@@ -1,8 +1,8 @@
 import React from "react"
 
-import "../styles/App.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Gallery from "../components/Gallery"
 import Cursor from "../components/Cursor"
@@ -12,6 +12,7 @@ import Contact from "../components/Contact"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Header />
     <Cursor />
     <Hero />
     <Gallery />

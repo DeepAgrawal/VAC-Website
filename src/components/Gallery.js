@@ -19,21 +19,21 @@ const Gallery = () => {
     }
   `)
   useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".gallery-container",
-          start: "top top",
-          end: () => document.innerHeight * 4,
-          scrub: 0.5,
-          pin: ".gallery-container",
-          anticipatePin: 1,
-        },
-      })
-      .from(".centerBlock", {
-        scale: 6,
-        ease: "none",
-      })
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".gallery-container",
+        start: "top top",
+        end: () => document.innerHeight * 4,
+        scrub: 0.5,
+        pin: ".gallery-container",
+        anticipatePin: 1,
+      },
+    })
+
+    tl.from(".centerBlock", {
+      scale: 6,
+      ease: "none",
+    })
       .from(
         ".lside-image",
         {
@@ -50,6 +50,11 @@ const Gallery = () => {
         },
         0.3
       )
+
+    return () => {
+      tl.kill()
+      tl = null
+    }
   }, [])
 
   return (
