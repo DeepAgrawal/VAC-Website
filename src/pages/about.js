@@ -7,6 +7,7 @@ import Cursor from "../components/Cursor"
 import AboutHero from "../components/AboutHero"
 import AboutWork from "../components/AboutWork"
 import AboutTeam from "../components/AboutTeam"
+import logo from "../images/logo.png"
 
 const About = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const About = () => {
   }, [])
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="About" img={logo} />
       <Cursor />
       <AboutHero />
       <AboutWork />

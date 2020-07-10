@@ -7,10 +7,11 @@ import Hero from "../components/Hero"
 import Gallery from "../components/Gallery"
 import Cursor from "../components/Cursor"
 import Events from "../components/Events"
+import logo from "../images/logo.png"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Home" img={logo} />
     <Header />
     <Cursor />
     <Hero />
