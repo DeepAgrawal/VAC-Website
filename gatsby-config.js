@@ -8,6 +8,7 @@ module.exports = {
     description: `VIT Animation Club is a vitans driven club. We deal with various softwares such as Photoshop, Illustrator, Premiere Pro, After Effects, Maya, Blender etc. A picture is worth a thousand words, an ANIMATION is worth a thousand pictures`,
     image: `/logo.png`,
     author: `Deep Agrawal`,
+    siteUrl: "https://vit-animation-club.netlify.app/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

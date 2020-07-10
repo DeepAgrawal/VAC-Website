@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { gsap } from "gsap"
+import { useStaticQuery, graphql } from "gatsby"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -7,9 +8,20 @@ import Cursor from "../components/Cursor"
 import AboutHero from "../components/AboutHero"
 import AboutWork from "../components/AboutWork"
 import AboutTeam from "../components/AboutTeam"
-import logo from "../images/logo.png"
 
 const About = () => {
+  const logo = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid {
+            src
+          }
+        }
+      }
+    }
+  `)
+
   useEffect(() => {
     let tl = gsap.timeline()
     tl.set(document.body, { css: { visibility: "visible" } })
@@ -20,7 +32,7 @@ const About = () => {
   }, [])
   return (
     <Layout>
-      <SEO title="About" img={logo} />
+      <SEO title="About" img={logo.file.childImageSharp.fluid.src} />
       <Cursor />
       <AboutHero />
       <AboutWork />
