@@ -10,6 +10,12 @@
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
+<div>
+<a href="https://www.narative.co/labs/novela/" target="_blank">
+<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
+</a>
+</div>
+
 ## 🚀 Quick start
 
 1.  **Get started with the site.**
@@ -17,7 +23,9 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Use the Gatsby CLI to pull the site.
 
     ```shell
-    # create a new Gatsby site using the default starter
+    # Command tp install Gatsby CLI globally on your machine.
+    npm install -g gatsby-cli
+    # With gatsby-cli
     gatsby new vac-website https://github.com/DeepAgrawal/VAC-Website
     ```
 
