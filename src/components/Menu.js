@@ -162,7 +162,7 @@ const Menu = ({ state, toggleMenu }) => {
         </div>
         <div className="menu-right">
           <div onClick={shakeWalt} className="walt-container">
-            <img src={Walt} alt="walt" />
+            <img src={Walt} alt="Walt" />
           </div>
         </div>
       </div>

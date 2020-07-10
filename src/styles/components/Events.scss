@@ -59,7 +59,14 @@
         .event-desc {
           margin: 0 60px;
           color: white;
-          // padding-bottom: 50px;
+          strong:before {
+            content: "";
+            display: block;
+            white-space: pre;
+          }
+          a {
+            color: $red;
+          }
         }
       }
       hr {

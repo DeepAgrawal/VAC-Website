@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"
-import { gsap } from "gsap"
+import React from "react"
 
 import Logo from "../images/logo.png"
 import Mail from "../images/email.svg"
@@ -8,40 +7,13 @@ import Insta from "../images/instagram.svg"
 import Facebook from "../images/facebook.svg"
 
 const Contact = () => {
-  useEffect(() => {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".contact",
-        start: () => document.querySelector(".contact").offsetTop - 100,
-      },
-    })
-    tl.from([".mail img", ".whatsapp img", ".insta img", ".facebook img"], {
-      duration: 1,
-      autoAlpha: 0,
-      scale: 1.5,
-      ease: "bounce.out",
-    })
-
-    return () => {
-      tl.kill()
-      tl = null
-    }
-  }, [])
-
-  const scrollToHero = () => {
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: "#home",
-    })
-  }
-
   return (
     <>
       <div id="contact" className="contact">
         <h1 className="contact-heading">Connect.</h1>
         <div className="contact-info container">
           <div className="contact-logo">
-            <img onClick={scrollToHero} src={Logo} alt="" />
+            <img src={Logo} alt="VIT Animation Club" />
           </div>
           <div className="contact-handles">
             <div className="contact-title">Contact</div>
@@ -52,7 +24,7 @@ const Contact = () => {
                   rel="noreferrer"
                   href="mailto:vitanimationclub@gmail.com"
                 >
-                  <img src={Mail} alt="" />
+                  <img src={Mail} alt="vitanimationclub@gmail.com" />
                 </a>
               </span>
               <span className="whatsapp old">
@@ -61,7 +33,7 @@ const Contact = () => {
                   rel="noreferrer"
                   href="https://wa.me/7588356260"
                 >
-                  <img src={Whatsapp} alt="" />
+                  <img src={Whatsapp} alt="VIT Animation Club" />
                 </a>
               </span>
             </div>
@@ -76,7 +48,7 @@ const Contact = () => {
                   rel="noreferrer"
                   href="https://www.instagram.com/vit_animation/"
                 >
-                  <img src={Insta} alt="" />
+                  <img src={Insta} alt="www.instagram.com/vit_animation" />
                 </a>
               </span>
               <span className="facebook old">
@@ -86,7 +58,7 @@ const Contact = () => {
                   rel="noreferrer"
                   href="https://www.facebook.com/vitanimationclub"
                 >
-                  <img src={Facebook} alt="" />
+                  <img src={Facebook} alt="www.facebook.com/vitanimationclub" />
                 </a>
               </span>
             </div>

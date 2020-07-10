@@ -17,4 +17,46 @@
       align-items: center;
     }
   }
+  .about-text-container {
+    height: 80vh;
+    overflow: hidden;
+    .about-bg-img {
+      position: relative;
+
+      .gatsby-image-wrapper {
+        height: 80vh !important;
+        object-fit: cover;
+      }
+      .red-overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        background-color: red;
+        top: 0;
+        mix-blend-mode: multiply;
+      }
+    }
+    .about-text {
+      position: absolute;
+      height: 100%;
+      z-index: 2;
+      top: 0;
+      display: flex;
+      align-items: center;
+      margin: 0 10%;
+
+      p {
+        color: white;
+        font-size: 1.5rem;
+        text-align: justify;
+        border-left: 3px solid white;
+        padding: 0 1%;
+        @include media("<=phone") {
+          font-size: 1.2rem;
+          border: none;
+        }
+      }
+    }
+  }
 }

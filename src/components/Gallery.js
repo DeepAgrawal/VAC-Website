@@ -8,11 +8,14 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Gallery = () => {
   const images = useStaticQuery(graphql`
-    query images {
-      file(relativePath: { eq: "sample-image.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+    query {
+      allContentfulGalleryImage {
+        nodes {
+          imageName
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
           }
         }
       }
@@ -67,7 +70,8 @@ const Gallery = () => {
               <div className="image1 block">
                 <Image
                   className="gray-scale"
-                  fluid={images.file.childImageSharp.fluid}
+                  fluid={images.allContentfulGalleryImage.nodes[0].image.fluid}
+                  alt={images.allContentfulGalleryImage.nodes[0].imageName}
                 />
               </div>
             </div>
@@ -75,7 +79,8 @@ const Gallery = () => {
               <div className="image2 block">
                 <Image
                   className="gray-scale"
-                  fluid={images.file.childImageSharp.fluid}
+                  fluid={images.allContentfulGalleryImage.nodes[1].image.fluid}
+                  alt={images.allContentfulGalleryImage.nodes[1].imageName}
                 />
               </div>
             </div>
@@ -83,7 +88,8 @@ const Gallery = () => {
               <div className="image3 block">
                 <Image
                   className="gray-scale"
-                  fluid={images.file.childImageSharp.fluid}
+                  fluid={images.allContentfulGalleryImage.nodes[2].image.fluid}
+                  alt={images.allContentfulGalleryImage.nodes[2].imageName}
                 />
               </div>
             </div>
@@ -91,7 +97,8 @@ const Gallery = () => {
               <div className="image4 block">
                 <Image
                   className="gray-scale"
-                  fluid={images.file.childImageSharp.fluid}
+                  fluid={images.allContentfulGalleryImage.nodes[3].image.fluid}
+                  alt={images.allContentfulGalleryImage.nodes[3].imageName}
                 />
               </div>
             </div>
@@ -99,7 +106,8 @@ const Gallery = () => {
               <div className="image5 block">
                 <Image
                   className="gray-scale"
-                  fluid={images.file.childImageSharp.fluid}
+                  fluid={images.allContentfulGalleryImage.nodes[4].image.fluid}
+                  alt={images.allContentfulGalleryImage.nodes[4].imageName}
                 />
               </div>
             </div>
@@ -107,7 +115,8 @@ const Gallery = () => {
               <div className="image6 block">
                 <Image
                   className="gray-scale"
-                  fluid={images.file.childImageSharp.fluid}
+                  fluid={images.allContentfulGalleryImage.nodes[5].image.fluid}
+                  alt={images.allContentfulGalleryImage.nodes[5].imageName}
                 />
               </div>
             </div>
@@ -115,7 +124,8 @@ const Gallery = () => {
               <div className="image7 block">
                 <Image
                   className="gray-scale"
-                  fluid={images.file.childImageSharp.fluid}
+                  fluid={images.allContentfulGalleryImage.nodes[6].image.fluid}
+                  alt={images.allContentfulGalleryImage.nodes[6].imageName}
                 />
               </div>
             </div>

@@ -1,0 +1,69 @@
+.about-team {
+  .team-heading {
+    color: $white;
+    font-size: 3rem;
+    text-decoration: underline;
+    @include media("<=tablet") {
+      text-align: center;
+    }
+  }
+  .board-members {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    align-items: center;
+    @include media("<=tablet") {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 40px;
+    }
+    @include media("<=phone") {
+      grid-template-columns: 1fr;
+      padding: 40px;
+    }
+    .member-card {
+      position: relative;
+      overflow: hidden;
+      .stud-info {
+        position: absolute;
+        left: -150%;
+        top: 0;
+        z-index: 2;
+        background: linear-gradient(to right, black, transparent);
+        padding: 5px;
+        transition: 0.3s;
+        h3 {
+          color: $white;
+          font-size: 1.6rem;
+        }
+        h4 {
+          color: $red;
+          font-size: 1.3rem;
+        }
+      }
+      .gatsby-image-wrapper {
+      }
+      .member-info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        background: linear-gradient(to right, black, transparent);
+        padding: 5px;
+        h3 {
+          color: $white;
+          font-size: 1.6rem;
+        }
+        h4 {
+          color: $red;
+          font-size: 1.3rem;
+        }
+      }
+      &:hover {
+        .stud-info {
+          left: 0;
+        }
+      }
+    }
+  }
+}

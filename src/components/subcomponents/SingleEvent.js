@@ -1,32 +1,23 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-const SingleEvent = () => {
-  const posters = useStaticQuery(graphql`
-    query posters {
-      file(relativePath: { eq: "sample-image.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+const SingleEvent = ({
+  poster,
+  posterTitle,
+  eventName,
+  eventDate,
+  eventDesc,
+}) => {
   return (
     <>
       <div className="event">
         <div className="event-poster">
           <div className="poster-img">
-            <Image
-              className="gray-scale"
-              fluid={posters.file.childImageSharp.fluid}
-            />
+            <Image className="gray-scale" fluid={poster} alt={posterTitle} />
           </div>
         </div>
         <div className="event-details">
-          <h3 className="event-name">Event Name</h3>
+          <h3 className="event-name">{eventName}</h3>
           <h4 className="event-date">
             <span className="date-svg">
               <svg
@@ -42,27 +33,12 @@ const SingleEvent = () => {
                 />
               </svg>
             </span>
-            <span className="date">07-06-2020 (Monday)</span>
+            <span className="date">{eventDate}</span>
           </h4>
-          <p className="event-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ipsum
-            itaque nulla sint cum minima delectus magnam, ea blanditiis hic non
-            aliquid, officiis nihil beatae! Possimus tempora, sit quibusdam
-            nihil fugit esse asperiores quo, distinctio cum cupiditate dicta
-            laborum nesciunt praesentium nisi maiores amet eveniet consequuntur.
-            Deleniti magni saepe maiores. Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Fugit nesciunt illo amet et
-            repellendus ex aliquid perspiciatis perferendis, doloremque saepe
-            maxime alias architecto eum. Deserunt voluptas rerum quasi
-            laboriosam ratione? Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Culpa suscipit nihil veniam sunt veritatis totam
-            vel nemo similique hic! Harum repellat perferendis culpa quo non.
-            Aliquid totam debitis ratione numquam. Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Ut culpa ipsum harum magnam sapiente
-            placeat aliquid accusantium praesentium obcaecati provident.
-            Molestiae dolore quam amet maiores aperiam, eaque deleniti natus
-            odio!
-          </p>
+          <p
+            className="event-desc"
+            dangerouslySetInnerHTML={{ __html: eventDesc }}
+          ></p>
         </div>
         <hr />
       </div>

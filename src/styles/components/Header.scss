@@ -4,11 +4,12 @@
   align-items: center;
   position: fixed;
   z-index: 1001;
-  // background-color: pink;
+
   .gatsby-image-wrapper {
     opacity: 1;
     height: 8vh;
     width: 24vh;
+
     @include media("<=tablet") {
       height: 5vh;
       width: 15vh;

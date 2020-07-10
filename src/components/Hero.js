@@ -3,8 +3,6 @@ import Arrow from "../images/right.svg"
 import { gsap } from "gsap"
 
 const Hero = () => {
-  console.log("called")
-
   useEffect(() => {
     let tl = gsap.timeline()
     window.scrollTo(0, 0)
@@ -82,7 +80,7 @@ const Hero = () => {
           <div onClick={scrollToGallery} className="scroll-mark old">
             Explore More
             <span>
-              <img src={Arrow} alt="Explore More" />
+              <img src={Arrow} alt="Explore VIT Animation Club" />
             </span>
           </div>
         </div>

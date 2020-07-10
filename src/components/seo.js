@@ -12,6 +12,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -19,6 +20,7 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const image = site.siteMetadata.image
 
   return (
     <Helmet
@@ -31,6 +33,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          property: "og:image",
+          content: image,
         },
         {
           property: `og:title`,
@@ -60,15 +66,30 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(
+        meta && meta.length > 0
+          ? {
+              name: "keywords",
+              content: meta.join(`, `),
+            }
+          : []
+      )}
     />
   )
 }
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
-  description: ``,
+  meta: [
+    "photoshop photo editing",
+    "photoshop background",
+    "2d animation",
+    "3d animation",
+    "vit clubs",
+    "vit teams",
+    "vit animation",
+  ],
+  description: `VIT Animation Club is a vitans driven club. We deal with various softwares such as Photoshop, Illustrator, Premiere Pro, After Effects, Maya, Blender etc. A picture is worth a thousand words, an ANIMATION is worth a thousand pictures`,
 }
 
 SEO.propTypes = {

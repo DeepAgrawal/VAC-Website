@@ -6,7 +6,29 @@ import SingleEvent from "./subcomponents/SingleEvent"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const Test = () => {
+const Events = () => {
+  const events = useStaticQuery(graphql`
+    query {
+      allContentfulEvent {
+        nodes {
+          eventPoster {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+            title
+          }
+          eventName
+          eventDate
+          eventDescription {
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
+      }
+    }
+  `)
+
   useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
@@ -14,7 +36,7 @@ const Test = () => {
         start: "top center",
       },
     })
-    tl.from(".event", { duration: 1, height: 0, autoAlpha: 0, y: -50 })
+    tl.from(".event", { duration: 0.8, height: 0, autoAlpha: 0, y: 100 })
 
     return () => {
       tl.kill()
@@ -26,11 +48,21 @@ const Test = () => {
     <div id="events" className="events">
       <div className="container">
         <h1 className="event-title">Event</h1>
-        <SingleEvent />
-        <SingleEvent />
+        {events.allContentfulEvent.nodes.map(event => {
+          return (
+            <SingleEvent
+              poster={event.eventPoster.fluid}
+              posterTitle={event.eventPoster.title}
+              eventName={event.eventName}
+              eventDate={event.eventDate}
+              eventDesc={event.eventDescription.childMarkdownRemark.html}
+              key={event.eventName}
+            />
+          )
+        })}
       </div>
     </div>
   )
 }
 
-export default Test
+export default Events
