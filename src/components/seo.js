@@ -18,7 +18,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         }
         ogImageDefault: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
-            fixed(height: 630, width: 1200) {
+            fixed(height: 630, width: 630) {
               src
             }
           }
@@ -52,7 +52,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: data.info.siteMetadata.title,
         },
         {
           property: `og:description`,
@@ -92,7 +92,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: data.info.siteMetadata.description,
         },
         {
           name: `twitter:description`,
@@ -100,7 +100,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         },
       ].concat({
         name: "keywords",
-        content: meta.join(","),
+        content: meta.join(", "),
       })}
     />
   )
