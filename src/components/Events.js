@@ -31,7 +31,7 @@ const Events = () => {
 
   useEffect(() => {
     let tl = gsap.timeline({
-      scrollTrigger: ".events",
+      scrollTrigger: { trigger: ".events", start: "top center" },
     })
     tl.from(".event", { duration: 0.8, height: 0, autoAlpha: 0, y: 100 })
 
