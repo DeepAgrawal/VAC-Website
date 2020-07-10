@@ -70,6 +70,7 @@ const Cursor = () => {
     })
 
     return () => {
+      console.log("cursor killed")
       window.removeEventListener("mousemove", traceCursor)
 
       links.forEach(link => {

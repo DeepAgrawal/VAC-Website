@@ -35,10 +35,10 @@ const SingleEvent = ({
             </span>
             <span className="date">{eventDate}</span>
           </h4>
-          <p
+          <div
             className="event-desc"
             dangerouslySetInnerHTML={{ __html: eventDesc }}
-          ></p>
+          ></div>
         </div>
         <hr />
       </div>
