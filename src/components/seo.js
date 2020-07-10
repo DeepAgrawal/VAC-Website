@@ -18,7 +18,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         }
         ogImageDefault: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
-            fixed(height: 630, width: 630) {
+            fixed(height: 300, width: 200) {
               src
             }
           }
