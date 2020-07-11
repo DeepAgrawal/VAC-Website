@@ -21,30 +21,26 @@ const AboutWork = () => {
         <h1 className="about-work-heading">Our Work</h1>
         <div className="work-types">
           <div className="work-type">
-            <h3>2D Design</h3>
+            <h3>2D</h3>
             <div className="sub-types">
-              <p>Photo Manipulation</p>
+              <p>Manipulation</p>
               <p>Illustration</p>
-              <p>Poster Making</p>
-              <p>Graphic Designing</p>
+              <p>Poster Design</p>
             </div>
           </div>
           <div className="work-type">
-            <h3>3D Modeling</h3>
+            <h3>3D</h3>
             <div className="sub-types">
-              <p>Photo Manipulation</p>
-              <p>Illustration</p>
-              <p>Poster Making</p>
-              <p>Graphic Designing</p>
+              <p>Motion Poster</p>
+              <p>Character Animation</p>
+              <p>Surface Rendering</p>
             </div>
           </div>
           <div className="work-type">
-            <h3>Video Editing</h3>
+            <h3>Video</h3>
             <div className="sub-types">
-              <p>Photo Manipulation</p>
-              <p>Illustration</p>
-              <p>Poster Making</p>
-              <p>Graphic Designing</p>
+              <p>VFX</p>
+              <p>Match Cut</p>
             </div>
           </div>
         </div>
