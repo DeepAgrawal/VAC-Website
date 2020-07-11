@@ -13,7 +13,10 @@
     padding: 40px 0;
     @include media("<=phone") {
       flex-direction: column;
-      align-items: center;
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
     }
     @include media("<=tablet") {
       justify-content: space-around;

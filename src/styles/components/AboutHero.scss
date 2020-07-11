@@ -53,7 +53,7 @@
         border-left: 3px solid white;
         padding: 0 1%;
         @include media("<=phone") {
-          font-size: 1.2rem;
+          font-size: 1rem;
           border: none;
         }
       }
