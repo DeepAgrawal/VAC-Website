@@ -47,17 +47,26 @@ const AboutHero = () => {
             <div className="red-overlay"></div>
             <div className="about-text">
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
-                a natus error, facere sed, unde adipisci culpa nihil consequatur
-                voluptas ea repellat tempore quos minima iusto in quaerat
-                repellendus porro?Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Incidunt aut perferendis non tempore similique
-                laudantium. Pariatur, laborum tempore non temporibus delectus,
-                repellat ipsam est consequuntur consequatur esse quam aut
-                facere. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Vitae, tenetur? Consequuntur quaerat dolor eius mollitia
-                reiciendis nulla rerum iusto, sunt impedit, hic sit suscipit
-                soluta dolorem, tempora dicta id. Nostrum.
+                VIT Animation Club, a place where creativity & Innovation put
+                vision to thoughts and ideas. Our Club grooms designers all
+                across VIT, who not just showcase talent in areas specific to
+                their domains but are also enthusiastic to learn more in the
+                field of animation. Passion is the fire that lights the way when
+                the time comes to dazzle everyone with the skills you have
+                acquired throughout.
+                <br />
+                Our strength is our team, which works closely with you to come
+                up with animations that are contemporary, fresh and unique. We
+                are determined to become a one-stop-destination for all your
+                animation oriented needs be it colorful events, competitions,
+                workshops, corporate identity kits, interactive flash games,
+                classroom sessions, websites or e-learning solutions. Currently
+                our flagship events are Action Mania and Hashtag Hollywood.
+                <br />
+                Our objective is to promote Animation, as a viable art form and
+                express the creative pragmatic mindset of those who want to
+                think "Out Of the Box" Come join us and be an integral part in
+                this flight of Creativity, colors and Cherish it.
               </p>
             </div>
           </div>
