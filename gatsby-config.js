@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `VIT Animation Club`,
-    description: `VIT Animation Club is a vitans driven club. We deal with various softwares such as Photoshop, Illustrator, Premiere Pro, After Effects, Maya, Blender etc. A picture is worth a thousand words, an ANIMATION is worth a thousand pictures`,
+    description: `VIT Animation Club is a vitans driven club. We deal with various softwares such as Photoshop, Illustrator, Premiere Pro, After Effects, Maya, Blender.`,
     author: `Deep Agrawal`,
     siteUrl: "https://vit-animation-club.netlify.app",
   },
