@@ -7,7 +7,7 @@ module.exports = {
     title: `VIT Animation Club`,
     description: `VIT Animation Club is a vitans driven club. We deal with various softwares such as Photoshop, Illustrator, Premiere Pro, After Effects, Maya, Blender.`,
     author: `Deep Agrawal`,
-    siteUrl: "https://vit-animation-club.netlify.app",
+    siteUrl: "https://vitanimationclub.tech",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
