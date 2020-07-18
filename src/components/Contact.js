@@ -31,7 +31,7 @@ const Contact = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://wa.me/7588356260"
+                  href="https://wa.me/917588356260"
                 >
                   <img src={Whatsapp} alt="VIT Animation Club" />
                 </a>
