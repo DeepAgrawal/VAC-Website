@@ -44,7 +44,7 @@ const Events = () => {
   return (
     <div id="events" className="events">
       <div className="container">
-        <h1 className="event-title">Event</h1>
+        <h1 className="event-title">Events</h1>
         {events.allContentfulEvent.nodes.map(event => {
           return (
             <SingleEvent

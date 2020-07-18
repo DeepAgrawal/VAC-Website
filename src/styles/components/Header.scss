@@ -4,11 +4,11 @@
   align-items: center;
   position: fixed;
   z-index: 1001;
-
   .gatsby-image-wrapper {
     opacity: 1;
     height: 8vh;
     width: 24vh;
+    backdrop-filter: opacity(80%);
 
     @include media("<=tablet") {
       height: 5vh;

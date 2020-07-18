@@ -12,7 +12,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 <div>
 <a href="https://vitanimationclub.tech/" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
+<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="live demo" width="295px" />
 </a>
 </div>
 

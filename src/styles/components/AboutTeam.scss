@@ -7,6 +7,7 @@
       text-align: center;
     }
   }
+
   .board-members {
     padding: 40px 0;
     display: grid;
@@ -40,8 +41,6 @@
           color: $red;
           font-size: 1.3rem;
         }
-      }
-      .gatsby-image-wrapper {
       }
       .member-info {
         position: absolute;

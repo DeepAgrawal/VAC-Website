@@ -1,8 +1,13 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { Link } from "gatsby"
+import { gsap } from "gsap"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
 import Menu from "./Menu"
+
+gsap.registerPlugin(ScrollToPlugin)
 
 const Header = () => {
   const [state, setState] = useState({
@@ -35,6 +40,14 @@ const Header = () => {
     }, 1000)
   }
 
+  const goTop = e => {
+    e.preventDefault()
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: "#home",
+    })
+  }
+
   const images = useStaticQuery(graphql`
     query Logo {
       file(relativePath: { eq: "vac-white-logo.png" }) {
@@ -52,11 +65,13 @@ const Header = () => {
       <div className="header">
         <div className="container">
           <div className="row v-center space-between">
-            <Image
-              className="header-logo"
-              fluid={images.file.childImageSharp.fluid}
-              alt="VIT Animation Club"
-            />
+            <Link onClick={goTop} to="#home">
+              <Image
+                className="header-logo"
+                fluid={images.file.childImageSharp.fluid}
+                alt="VIT Animation Club"
+              />
+            </Link>
             <div className="hamburger link">
               <button disabled={disabled} onClick={toggleMenu}>
                 <svg

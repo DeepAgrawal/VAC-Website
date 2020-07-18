@@ -8,6 +8,7 @@ import Cursor from "../components/Cursor"
 import AboutHero from "../components/AboutHero"
 import AboutWork from "../components/AboutWork"
 import AboutTeam from "../components/AboutTeam"
+import Faculty from "../components/Faculty"
 
 const About = () => {
   const logo = useStaticQuery(graphql`
@@ -36,6 +37,7 @@ const About = () => {
       <Cursor />
       <AboutHero />
       <AboutWork />
+      <Faculty />
       <AboutTeam />
     </Layout>
   )

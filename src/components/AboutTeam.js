@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 const AboutTeam = () => {
   useEffect(() => {
     gsap.from(".member-card", {
-      scrollTrigger: ".about-team",
+      scrollTrigger: ".member-card",
       duration: 0.6,
       autoAlpha: 0,
       xPercent: -100,

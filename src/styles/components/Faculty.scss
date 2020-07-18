@@ -1,0 +1,57 @@
+.faculty-coor {
+  .faculty-heading {
+    color: $white;
+    font-size: 3rem;
+    text-decoration: underline;
+    @include media("<=tablet") {
+      text-align: center;
+    }
+  }
+  .inner-container {
+    display: flex;
+    padding: 40px 0;
+    @include media("<=tablet") {
+      flex-direction: column;
+    }
+    .faculty-image {
+      width: 21%;
+      margin-left: 10px;
+      .gatsby-image-wrapper {
+        border-radius: 50%;
+      }
+      @include media("<=tablet") {
+        position: relative;
+        left: 20;
+        width: 100%;
+        padding: 0 30%;
+        padding-bottom: 40px;
+      }
+      @include media("<=phone") {
+        position: relative;
+        left: 20;
+        width: 100%;
+        padding: 0 10%;
+        padding-bottom: 40px;
+      }
+    }
+    .faculty-info {
+      padding-left: 10%;
+      position: relative;
+      h2 {
+        color: $white;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-weight: 100;
+        color: $white;
+        margin-bottom: 50px;
+      }
+      img {
+        position: absolute;
+        bottom: 0;
+        fill: $white;
+        height: 40px;
+      }
+    }
+  }
+}
