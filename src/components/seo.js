@@ -123,13 +123,13 @@ function SEO({ description, lang, meta, title, pathname }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [
+    "vit animation club",
+    "vit clubs",
+    "vit vellore",
     "photoshop photo editing",
     "photoshop background",
     "2d animation",
     "3d animation",
-    "vit clubs",
-    "vit teams",
-    "vit animation",
   ],
   description: `VIT Animation Club is a vitans driven club. We deal with various softwares such as Photoshop, Illustrator, Premiere Pro, After Effects, Maya, Blender etc. A picture is worth a thousand words, an ANIMATION is worth a thousand pictures`,
 }
