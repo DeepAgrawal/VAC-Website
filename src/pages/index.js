@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,6 +25,23 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-163451965-1"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-163451965-1');
+        `,
+          }}
+        />
+      </Helmet>
       <SEO title="Home" img={logo.file.childImageSharp.fluid.src} />
       <Header />
       <Cursor />

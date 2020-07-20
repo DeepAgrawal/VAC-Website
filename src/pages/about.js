@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { gsap } from "gsap"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -33,6 +34,23 @@ const About = () => {
   }, [])
   return (
     <Layout>
+      <Helmet>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-163451965-1"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-163451965-1');
+        `,
+          }}
+        />
+      </Helmet>
       <SEO title="About" img={logo.file.childImageSharp.fluid.src} />
       <Cursor />
       <AboutHero />
