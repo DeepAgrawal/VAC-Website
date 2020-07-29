@@ -64,6 +64,8 @@
     }
     .box3 {
       grid-area: box3;
+      position: relative;
+      z-index: 2;
       // background-color: red;
       .image3 {
       }
