@@ -35,6 +35,7 @@
         background-color: red;
         top: 0;
         mix-blend-mode: multiply;
+        backdrop-filter: blur(15px);
       }
     }
     .about-text {
