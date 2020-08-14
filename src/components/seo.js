@@ -122,7 +122,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         "sameAs": [ "https://www.facebook.com/vitanimationclub",
         "https://www.instagram.com/vit_animation/",
         "https://www.youtube.com/channel/UCv6jdaXdcxnaoqKvmFC3epw",
-        "https://www.linkedin.com/company/vit-animation/" ]
+        "https://www.linkedin.com/company/vit-animation" ]
       </script>
     </Helmet>
   )
