@@ -25,6 +25,9 @@
       .event-poster {
         // flex: 1;
         width: 50%;
+        @include media("<=tablet") {
+          width: 100%;
+        }
         .poster-img {
           margin: 0 60px;
         }
@@ -33,6 +36,7 @@
         width: 50%;
         @include media("<=tablet") {
           padding: 5vh 0;
+          width: 100%;
         }
         .event-name {
           color: white;
