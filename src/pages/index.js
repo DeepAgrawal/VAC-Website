@@ -8,6 +8,7 @@ import Hero from "../components/Hero"
 import Gallery from "../components/Gallery"
 import Cursor from "../components/Cursor"
 import Events from "../components/Events"
+import GravitasEvents from "../components/GravitasEvents"
 
 const IndexPage = () => {
   const logo = useStaticQuery(graphql`
@@ -30,6 +31,7 @@ const IndexPage = () => {
       <Hero />
       <Gallery />
       <Events />
+      <GravitasEvents />
     </Layout>
   )
 }
