@@ -1,6 +1,6 @@
 import React from "react"
 
-const SingleEvent = ({ eventName, eventDate, eventDesc }) => {
+const SingleEvent = ({ link, eventName, eventDate, eventDesc }) => {
   return (
     <>
       <div className="event">
@@ -9,7 +9,7 @@ const SingleEvent = ({ eventName, eventDate, eventDesc }) => {
             <iframe
               width="100%"
               height="350"
-              src="https://www.youtube.com/embed/Alpi8b4qoXU"
+              src={link}
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
