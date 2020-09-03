@@ -1,19 +1,8 @@
-import React, { useEffect } from "react"
-import { gsap } from "gsap"
+import React from "react"
 
 import GravitasSingleEvent from "./subcomponents/GravitasSingleEvent"
 
 const GravitasEvents = () => {
-  useEffect(() => {
-    let tl = gsap.timeline()
-    tl.from(".event", { duration: 0.8, height: 0, autoAlpha: 0, y: 100 })
-
-    return () => {
-      tl.kill()
-      tl = null
-    }
-  }, [])
-
   return (
     <div id="events" className="events">
       <div className="container">
