@@ -9,7 +9,7 @@
     -webkit-text-fill-color: transparent;
     text-align: center;
     @include media("<=phone") {
-      padding-top: 0;
+      padding-top: 20px;
     }
   }
   .contact-info {
