@@ -8,6 +8,9 @@
     -webkit-text-stroke: 0.12rem white;
     -webkit-text-fill-color: transparent;
     text-align: center;
+    @include media("<=phone") {
+      padding-top: 0;
+    }
   }
   .contact-info {
     display: flex;
