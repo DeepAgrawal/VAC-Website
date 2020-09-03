@@ -30,8 +30,8 @@ const IndexPage = () => {
       <Cursor />
       <Hero />
       <Gallery />
-      <GravitasEvents />
       <Events />
+      <GravitasEvents />
     </Layout>
   )
 }
