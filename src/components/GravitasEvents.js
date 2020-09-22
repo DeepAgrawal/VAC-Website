@@ -8,11 +8,11 @@ const GravitasEvents = () => {
       <div className="container">
         <h1 className="event-title">Gravitas Events</h1>
 
-        {/* <GravitasSingleEvent
+        <GravitasSingleEvent
           className="event"
-          link="https://www.youtube.com/embed/Alpi8b4qoXU"
+          link="https://www.youtube.com/embed/JGzC4z9qtjg"
           eventName="Action Mania 3.0"
-          eventDate="13th September, 2020 (9AM - 5PM)"
+          eventDate="13th September, 2020 (Expired)"
           eventDesc="Action mania 3.0 is an interactive hands-on event conducted by VAC in which the participants are provided with deep insight into creation and animation of 3-D objects. The event focuses on all the tricks of 3-D assets, involved in graphic films and architecture achieved by using one of the most powerful modelling software- Autodesk Maya. The students are first tutored by a professional who holds impeccable expertise in this field, introducing them to the know-hows of  lucrative career options in the animation industry.
           <div>
           Register Here - 
@@ -22,7 +22,7 @@ const GravitasEvents = () => {
         </div>
           "
           key="Action Mania 3.0"
-        /> */}
+        />
 
         <GravitasSingleEvent
           className="event"
