@@ -4,11 +4,11 @@ import GravitasSingleEvent from "./subcomponents/GravitasSingleEvent"
 
 const GravitasEvents = () => {
   return (
-    <div id="events" className="events">
+    <div id="gravitas-events" className="events">
       <div className="container">
         <h1 className="event-title">Gravitas Events</h1>
 
-        <GravitasSingleEvent
+        {/* <GravitasSingleEvent
           className="event"
           link="https://www.youtube.com/embed/Alpi8b4qoXU"
           eventName="Action Mania 3.0"
@@ -22,7 +22,7 @@ const GravitasEvents = () => {
         </div>
           "
           key="Action Mania 3.0"
-        />
+        /> */}
 
         <GravitasSingleEvent
           className="event"

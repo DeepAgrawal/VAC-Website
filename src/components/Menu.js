@@ -136,6 +136,13 @@ const Menu = ({ state, toggleMenu }) => {
             <Link
               onClick={toggleMenu}
               className="menu-link menu-link-scroll link"
+              to="#gravitas-events"
+            >
+              Gravitas Events
+            </Link>
+            <Link
+              onClick={toggleMenu}
+              className="menu-link menu-link-scroll link"
               to="#contact"
             >
               Contact Us
