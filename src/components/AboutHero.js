@@ -47,7 +47,7 @@ const AboutHero = () => {
             <div className="red-overlay"></div>
             <div className="about-text">
               <p>
-                VIT Animation Club(awesome), a place where creativity & Innovation put
+                VIT Animation Club(awesome returns), a place where creativity & Innovation put
                 vision to thoughts and ideas. Our Club grooms designers all
                 across VIT, who not just showcase talent in areas specific to
                 their domains but are also enthusiastic to learn more in the
