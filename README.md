@@ -11,9 +11,7 @@
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 <div>
-<a href="https://vitanimationclub.tech/" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="live demo" width="295px" />
-</a>
+<a href="https://vit-animation-club.netlify.app/" target="_blank"></a>
 </div>
 
 ## 🚀 Quick start
