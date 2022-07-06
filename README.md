@@ -11,7 +11,7 @@
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 <div>
-<a href="https://vit-animation-club.netlify.app/" target="_blank"></a>
+<a href="https://vit-animation-club.netlify.app/" target="_blank">Live Demo</a>
 </div>
 
 ## 🚀 Quick start
